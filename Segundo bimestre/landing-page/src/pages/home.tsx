@@ -13,9 +13,13 @@ import ProfileImageOne from "../assets/profile_picture.svg";
 import "../styles/hero.css";
 import "../styles/testimonials.css";
 import "../styles/pricing.css";
+import "../styles/contact.css";
+import "../styles/footer.css";
 import SolutionCard from "../components/SolutionCard";
 import TestimonialCard from "../components/TestimonialCard";
 import PricingCard from "../components/pricingCard";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 
 export default function Home() {
@@ -185,6 +189,8 @@ export default function Home() {
         <PricingCard isPremium={true} name="Premium" price={29.90} benefits={["Entrega grátis", "Desconto em parceiros", "Receitas exclusivas"]} />
       </section>
     </section>
+    <Contact />
+    <Footer />
   </>
   )
 }
