@@ -60,6 +60,7 @@ export default function Home() {
         <div className="desktop-only">
           <div className="flex items-center">
             <a className="reverse-color" href="">Login</a>
+            <span className="ml-lg"></span>
             <Button text="Cadastre-se" />
           </div>
         </div>
