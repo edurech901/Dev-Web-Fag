@@ -187,7 +187,7 @@ export default function Home() {
       <section className="even-columns gap-1.5">
         <PricingCard isPremium={false} name="Free" price={0} benefits={["Retirada na loja", "Apenas 1 por CPF"]} />
         <PricingCard isPremium={false} name="Free" price={20} benefits={["Retirada na loja", "Apenas 1 por CPF"]} />
-        <PricingCard isPremium={true} name="Premium" price={29.90} benefits={["Entrega grátis", "Desconto em parceiros", "Receitas exclusivas"]} />
+        <PricingCard isPremium={true} name="Premium" price={29.90} benefits={["Entrega grátis", "Desconto em parceiros", "Receitas exclusivas"]} tempoDesconto={1} />
       </section>
     </section>
     <Contact />

@@ -7,14 +7,15 @@ interface IPricingCardProps {
   name: string
   price: number
   benefits: string[]
+  tempoDesconto?: number
 }
 
-export default function PricingCard({isPremium, name, price, benefits}: IPricingCardProps) {
+export default function PricingCard({isPremium, name, price, benefits, tempoDesconto}: IPricingCardProps) {
   return (
     <div className={`pricing-card ${isPremium ? "premium" : ""}`}>
             {isPremium && (
               <span className="bonus">
-                <p>1º MÊS COM DESCONTO</p>
+                <p>${tempoDesconto}º MÊS COM DESCONTO</p>
               </span>
             )}
             <span className="plan">
