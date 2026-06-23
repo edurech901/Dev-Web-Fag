@@ -7,7 +7,7 @@ export default function Footer() {
     <footer id="footer">
       <section className="container footer-content">
         <div className="brand">
-          <h3>LogoMarca</h3>
+          <h3>AssinaFácil</h3>
           <span>
             <a href="#">
               <img src={Instagram} alt="Instagram" width={18} height={18} />
@@ -25,13 +25,13 @@ export default function Footer() {
           <h3>Empresa</h3>
           <ul>
             <li>
-              <a href="#">Sobre nós</a>
-            </li>
-            <li>
-              <a href="#">Faça parte do time</a>
+              <a href="#">Sobre o AssinaFácil</a>
             </li>
             <li>
               <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Ajuda</a>
             </li>
           </ul>
         </div>
@@ -40,13 +40,16 @@ export default function Footer() {
           <h3>Funcionalidades</h3>
           <ul>
             <li>
-              <a href="#">Marketing</a>
+              <a href="#">Dashboard</a>
             </li>
             <li>
-              <a href="#">Análise de dados</a>
+              <a href="#">Assinaturas</a>
             </li>
             <li>
-              <a href="#">Boot discord</a>
+              <a href="#">Categorias</a>
+            </li>
+            <li>
+              <a href="#">Relatórios</a>
             </li>
           </ul>
         </div>
@@ -55,16 +58,13 @@ export default function Footer() {
           <h3>Recursos</h3>
           <ul>
             <li>
-              <a href="#">IOS & Android</a>
+              <a href="#">Central de Ajuda</a>
             </li>
             <li>
-              <a href="#">Teste a Demo</a>
+              <a href="#">Documentação</a>
             </li>
             <li>
-              <a href="#">Clientes</a>
-            </li>
-            <li>
-              <a href="#">API</a>
+              <a href="#">Suporte</a>
             </li>
           </ul>
         </div>

@@ -6,10 +6,12 @@ import "../styles/solution.css";
 import Button from "../components/Button";
 import Close from "../assets/close.svg";
 import Menu from "../assets/hamburguer.svg";
-import HeroRectangleOne from "../assets/rectangleOne.png";
-import HeroRectangleTwo from "../assets/rectangleTwo.png";
-import Champion from "../assets/champion.svg";
+import HeroRectangleOne from "../assets/rectangleOne.svg";
+import HeroRectangleTwo from "../assets/rectangleTwo.svg";
 import ProfileImageOne from "../assets/profile_picture.svg";
+import Dashboard from "../assets/dashboard.svg";
+import Subscription from "../assets/subscription.svg";
+import Search from "../assets/search.svg";
 import "../styles/hero.css";
 import "../styles/testimonials.css";
 import "../styles/pricing.css";
@@ -25,15 +27,15 @@ import Footer from "../components/Footer";
 export default function Home() {
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  useEffect(() => {
+    const html = document.querySelector("html");
+    if (html) {
+      html.style.overflow = showMobileMenu ? "hidden" : "auto";
+    }
+  }, [showMobileMenu]);
+
   return (
-
-    useEffect(() => {
-      const html = document.querySelector("html");
-      if (html) {
-        html.style.overflow = showMobileMenu ? "hidden" : "auto";
-      }
-    }, [showMobileMenu]),
-
   <>
     <header className="container py-sm">
       <nav className="flex items-center justify-between">
@@ -41,16 +43,16 @@ export default function Home() {
         <div className="desktop-only">
           <ul className="flex gap-1">
             <li>
-              <a href="#">Home</a>
+              <a href="#">Início</a>
             </li>
             <li>
-              <a href="#solution">Soluções</a>
+              <a href="#solution">Funcionalidades</a>
             </li>
             <li>
               <a href="#testimonials">Depoimentos</a>
             </li>
             <li>
-              <a href="#pricing">Preços</a>
+              <a href="#pricing">Planos</a>
             </li>
             <li>
               <a href="#contact">Contato</a>
@@ -59,9 +61,9 @@ export default function Home() {
         </div>
         <div className="desktop-only">
           <div className="flex items-center">
-            <a className="reverse-color" href="">Login</a>
+            <a className="reverse-color" href="">Entrar</a>
             <span className="ml-lg"></span>
-            <Button text="Cadastre-se" />
+            <Button text="Criar Conta" />
           </div>
         </div>
         <div className="mobile-menu">
@@ -70,16 +72,16 @@ export default function Home() {
               <div className="container flex">
                 <ul>
                   <li>
-                    <a onClick={() => setShowMobileMenu(!showMobileMenu)} href="#">Home</a>
+                    <a onClick={() => setShowMobileMenu(!showMobileMenu)} href="#">Início</a>
                   </li>
                   <li>
-                    <a onClick={() => setShowMobileMenu(!showMobileMenu)} href="#solution">Soluções</a>
+                    <a onClick={() => setShowMobileMenu(!showMobileMenu)} href="#solution">Funcionalidades</a>
                   </li>
                   <li>
                     <a onClick={() => setShowMobileMenu(!showMobileMenu)} href="#testimonials">Depoimentos</a>
                   </li>
                   <li>
-                    <a onClick={() => setShowMobileMenu(!showMobileMenu)} href="#pricing">Preços</a>
+                    <a onClick={() => setShowMobileMenu(!showMobileMenu)} href="#pricing">Planos</a>
                   </li>
                   <li>
                     <a onClick={() => setShowMobileMenu(!showMobileMenu)} href="#contact">Contato</a>
@@ -105,15 +107,15 @@ export default function Home() {
       <img src={HeroRectangleOne} alt="Retangulo dois tela inicial" />
       <div className="container content">
         <p className="desktop-only">
-          Olá
+          Controle suas assinaturas
         </p>
-        <h1>Comida de mãe direto no seu apê, é só pedir que entregamos para você!</h1>
-        <p>Já pensou em matar a saudade daquela comida caseira? O melhor de tudo, nossas receitas são 100% saudáveis, bora entrar no shape.
+        <h1>Nunca mais perca o controle das suas assinaturas digitais</h1>
+        <p>Gerencie Netflix, Spotify, Disney+, cursos online, academias e qualquer serviço recorrente em um único lugar.
         </p>
         <div className="flex gap-1">
-          <span><Button text="Cadastre-se" /></span>
+          <span><Button text="Começar Agora" /></span>
           <span className="desktop-only">
-            <Button text="Veja mais" secondary />
+            <Button text="Conhecer Recursos" secondary />
           </span>
         </div>
       </div>
@@ -121,73 +123,70 @@ export default function Home() {
     <section className="container" id="solution">
       <header>
         <span>
-          <h2>Soluções</h2>
+          <h2>Funcionalidades</h2>
           <span className="desktop-only">
             <h2>
-              Sob medida para você
+              Tudo o que você precisa para organizar suas assinaturas
             </h2>
           </span>
         </span>
         <p>
-          Inovação é com a gente! A <strong>DonaFrost </strong>
-          já conquistou diversos clientes, seja você mais um deles,
-          veja tudo que pode ganhar com nossos serviços.
+          Centralize informações importantes dos seus serviços e acompanhe seus gastos de forma simples e prática.
         </p>
       </header>
       <section className="even-columns">
-        <SolutionCard icon={Champion} alt="ícone campeão" title="Produto Vencedor" description="Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto, entre eles podemos citar o CityFarm da FAG e Startup Garage." />
-        <SolutionCard icon={Champion} alt="ícone campeão" title="Produto Vencedor" description="Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto, entre eles podemos citar o CityFarm da FAG e Startup Garage." />
-        <SolutionCard icon={Champion} alt="ícone campeão" title="Produto Vencedor" description="Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto, entre eles podemos citar o CityFarm da FAG e Startup Garage." />
+        <SolutionCard icon={Subscription} alt="ícone cartão" title="Gerenciamento de Assinaturas" description="Cadastre serviços digitais, informe valores, datas de cobrança e mantenha todas as informações organizadas." />
+        <SolutionCard icon={Dashboard} alt="ícone dashboard" title="Dashboard Financeiro" description="Visualize rapidamente quanto está gastando por mês com todos os seus serviços recorrentes." />
+        <SolutionCard icon={Search} alt="ícone busca" title="Busca e Filtros" description="Encontre assinaturas facilmente utilizando filtros por categoria ou status." />
       </section>
     </section>
     <section id="testimonials">
       <header>
         <span>
           <p className="desktop-only">
-            Conselho de quem conhece
+            Quem utiliza recomenda
           </p>
-          <h2>Cada cliente importa!</h2>
+          <h2>Organização que faz diferença</h2>
         </span>
         <p>
-          Quem já pediu sabe da qualidade das nossas receitas, estamos tirando aquela ideia de que
-          comida congelada tem de ser algo sem gosto, acompanhe abaixo os testemunhos de quem já comprou e aprovou.
+          Veja como o AssinaFácil ajuda usuários a acompanharem melhor seus gastos recorrentes.
         </p>
       </header>
       <section className="carousel">
         <div className="carousel-content">
           <TestimonialCard
-            name="Ellon Ma"
-            position="CEO BING CHILLING"
-            avaliation="Certamente o mercado chinês de eletricos está bombando, só existe uma coisa melhor do que isso, provar uma boa comida DonaFrost no almoço."
+            name="Carlos Andrade"
+            position="Usuário"
+            avaliation="Eu não percebia quanto gastava com assinaturas. Agora consigo visualizar tudo em segundos."
             profileImage={ProfileImageOne}
-            qtdStars={4}
+            qtdStars={5}
           />
           <TestimonialCard
-            name="Ellon Ma"
-            position="CEO BING CHILLING"
-            avaliation="Certamente o mercado chinês de eletricos está bombando, só existe uma coisa melhor do que isso, provar uma boa comida DonaFrost no almoço."
+            name="Mariana Silva"
+            position="Usuária"
+            avaliation="Consegui identificar serviços que não utilizava mais e reduzir meus gastos mensais."
             profileImage={ProfileImageOne}
-            qtdStars={3}
+            qtdStars={5}
           />
           <TestimonialCard
-            name="Ellon Ma"
-            position="CEO BING CHILLING"
-            avaliation="Certamente o mercado chinês de eletricos está bombando, só existe uma coisa melhor do que isso, provar uma boa comida DonaFrost no almoço."
+            name="Carlos Andrade"
+            position="Usuário"
+            avaliation="Eu não percebia quanto gastava com assinaturas. Agora consigo visualizar tudo em segundos."
             profileImage={ProfileImageOne}
-            qtdStars={2}
+            qtdStars={5}
           />
         </div>
       </section>
     </section>
     <section id="pricing" className="container">
       <header>
-        <p className="desktop-only">Planos e preços</p>
-        <h2>Nossos planos</h2>
+        <p className="desktop-only">Nossos Planos</p>
+        <h2>Escolha o plano ideal</h2>
       </header>
       <section className="even-columns gap-1.5">
-        <PricingCard isPremium={false} name="Free" price={0} benefits={["Retirada na loja", "Apenas 1 por CPF"]} />
-        <PricingCard isPremium={false} name="Free" price={20} benefits={["Retirada na loja", "Apenas 1 por CPF"]} />
-        <PricingCard isPremium={true} name="Premium" price={29.90} benefits={["Entrega grátis", "Desconto em parceiros", "Receitas exclusivas"]} tempoDesconto={1} />
+        <PricingCard isPremium={false} name="Plano Estudante" price={0} benefits={["Até 10 assinaturas", "Dashboard básico", "Filtros simples"]} />
+        <PricingCard isPremium={false} name="Plano Premium" price={9.90} benefits={["Assinaturas ilimitadas", "Dashboard avançado", "Categorias personalizadas"]} />
+        <PricingCard isPremium={true} name="Plano Família" price={14.90} benefits={["Perfis compartilhados", "Controle familiar", "Relatórios completos"]} tempoDesconto={1} />
       </section>
     </section>
     <Contact />

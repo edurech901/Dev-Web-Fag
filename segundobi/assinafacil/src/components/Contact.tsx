@@ -38,30 +38,28 @@ export default function Contact() {
   return (
     <section className="container" id="contact">
       <header>
-        <p>Envie sua dúvida</p>
+        <p>Fale Conosco</p>
         <h2>Entre em contato</h2>
         <span>
-          Entre em contato, estamos dispostos a tirar qualquer dúvida, seja um
-          orçamento, uma dúvida técnica de algum de nossos produtos. Estamos à
-          disposição para responder.
+          Possui dúvidas, sugestões ou deseja conhecer mais sobre o AssinaFácil? Entre em contato conosco.
         </span>
       </header>
 
       <form onSubmit={handleSubmit}>
         <input
           type="email"
-          placeholder="Seu melhor Email"
+          placeholder="Digite seu e-mail"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
         />
         <input
           type="text"
-          placeholder="Motivo do contato. Ex: Gostei muito do produto X, poderia me enviar um orçamento?"
+          placeholder="Digite sua mensagem"
           value={message}
           onChange={(event) => setMessage(event.target.value)}
         />
         <span>
-          <Button text="Enviar" />
+          <Button text="Enviar Mensagem" />
         </span>
       </form>
     </section>

@@ -13,13 +13,13 @@
 }
 
 :root {
-    --bg-color: #FFF;
-    --text-color: #252B42;
-    --second-text-color: #737373;
+    --bg-color: #F8FAFC;
+    --text-color: #1E293B;
+    --second-text-color: #1E293B;
     --light-text-color: #FFF;
-    --light-gray: #F8F8F8;
-    --primary-color: #23A6F0;
-    --secondary-color: #B2E3FF;
+    --light-gray: #F8FAFC;
+    --primary-color: #090736;
+    --secondary-color: #6366F1;
 
     --ff-sans: "Montserrat", system-ui, sans-serif;
     --fw-base: 400;
@@ -37,6 +37,7 @@
     --py-lg: 1.5rem;
     --py-xl: 3rem;
     --px-lg: 1.5rem;
+    --accent-color: #10B981;
 }
 
 html {
